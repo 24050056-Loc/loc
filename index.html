@@ -1,171 +1,201 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Lê Quang Lộc (Fullstack Developer)</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu 5 thành viên</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: rgba(230, 209, 26, 0.678);
+      text-align: center;
+      transition: background 1s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .slider {
+      position: relative;
+      width: 320px;
+      height: 450px;
+      margin: 0 auto;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      padding: 25px;
+      animation: fade 0.6s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Avatar nổi */
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.1);
+    }
+
+    .slide h2 {
+      font-size: 22px;
+      margin-bottom: 6px;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .slide p {
+      font-size: 15px;
+      margin-bottom: 12px;
+      color: #f0f0f0;
+    }
+
+    /* Nút xem trang cá nhân */
+    .profile-btn {
+      display: inline-block;
+      background-color: #ffffffd9;
+      color: #333;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .profile-btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+
+    /* Nút điều hướng trái phải */
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    button {
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+      font-size: 22px;
+      padding: 10px 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+      background-color: white;
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 <body>
+  <h1>TEAM BLACKSHADOW</h1>
 
-    <header id="header">
-        <h1>Xin chào mình là Lê Quang Lộc</h1>
-        <h2>Fullstack Developer</h2>
-        <p>Đến từ [Tây Ninh thân yêu]</p>
-        <img src="images/a.jpg" alt="Ảnh đại diện của Lê Quang Lộc">
-    </header>
+  <div class="slider">
+<div class="slide active" data-bg="url('images/image copy 4.png')">
+      <img src="images/a.jpg" alt="Linh Pham" class="avatar">
+      <h2>Lê Quang Lộc</h2>
+      <p>Trưởng nhóm</p>
+      <a href="https://24050056-loc.github.io/loc/" class="profile-btn">Xem trang cá nhân</a>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="slide" data-bg="url('images/image copy 6.png')">
+      <img src="images/image copy.png" alt="Tu Nguyen" class="avatar">
+      <h2>Phan Duy Phú</h2>
+      <p>Thành viên</p>
+      <a href="https://24050055-dev.github.io/phu/lienhe.html" class="profile-btn">Xem trang cá nhân</a>
+    </div>
 
-    <section id="about" class="section-with-bg">
-        <h2>một chút về bản thân</h2>
-        <p>Tôi là sinh viên trường Đại Học Bình Dương và đang là sinh viên năm 2, chuyên về phát triển web. Tôi có niềm đam mê sâu sắc với việc xây dựng các giải pháp kỹ thuật số cùng với các sở thích mày mò và chơi game</p>
+    <div class="slide" data-bg="url('images/image copy 5.png')">
+      <img src="images/image copy 3.png" alt="Huy Pham" class="avatar">
+      <h2>Cao Phước Hưng</h2>
+      <p>Thành viên</p>
+      <a href="https://24050057-hung.github.io/CaoHung/" class="profile-btn">Xem trang cá nhân</a>
+    </div>
 
-        <div class="info-tabs">
-            <article class="card-style">
-                <h3>Kỹ Năng</h3>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <span class="skill-name">HTML / CSS / JavaScript</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%;">85%</div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Python / Node.js</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%;">70%</div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">SQL Database</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 65%;">65%</div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">App Development (Android/iOS)</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 50%;">50%</div>
-                        </div>
-                    </div>
-                </div>
-                </article>
-            <article class="card-style">
-                <h3>Kinh Nghiệm</h3>
-                <ul>
-                    <li>Web Development Projects</li>
-                    
-                </ul>
-            </article>
-            <article class="card-style">
-                <h3>Thông Tin Khác</h3>
-                <ul>
-                    <li>Ngày Sinh: 5/4/2006</li>
-                    <li>Giới Tính: Nam</li>
-                    <li>Quê Quán: Châu Thành, Tây Ninh</li>
-                </ul>
-            </article>
-        </div>
-    </section>
+    <div class="slide" data-bg="url('images/image copy 7.png')">
+      <img src="images/image copy 2.png" alt="Minh Hieu" class="avatar">
+      <h2>Đinh Ngô Thành Nghĩa</h2>
+      <p>Thành viên</p>
+      <a href="https://ndinh0932014-ui.github.io/ktragiuaky/" class="profile-btn">Xem trang cá nhân</a>
+    </div>
 
-    <section id="hobbies">
-        <h2>Sở Thích Cá Nhân</h2>
-        <div class="service-grid">
-            <article class="card-style">
-                <img src="images/image copy 4.png" alt="Hình ảnh minh họa chơi game" class="hobby-img">
-                <h3>Chơi Game</h3>
-                <p>Thư giãn và phát triển kỹ năng giải quyết vấn đề qua các trò chơi chiến thuật và nhập vai (RPG).</p>
-            </article>
-            <article class="card-style">
-                <img src="images/image copy 6.png" alt="Hình ảnh minh họa nghiên cứu công nghệ" class="hobby-img">
-                <h3>Nghiên Cứu Công Nghệ</h3>
-                <p>Luôn cập nhật các framework, ngôn ngữ lập trình và xu hướng công nghệ mới nhất.</p>
-            </article>
-            <article class="card-style">
-                <img src="images/image copy 5.png" alt="Hình ảnh minh họa thể thao " class="hobby-img">
-                <h3>Thể Thao </h3>
-                <p>Tăng cường sức khỏe và học hỏi tinh thần đồng đội qua việc chơi bóng đá hàng tuần.</p>
-            </article>
-        </div>
-    </section>
+    <div class="slide" data-bg="url('images/image copy 8.png')">
+      <img src="images/phong4.jpg" alt="Quang Duc" class="avatar">
+      <h2>Vương Đạt Kiến Phong</h2>
+      <p>Thành viên</p>
+      <a href="https://24050068-design.github.io/12345/" class="profile-btn">Xem trang cá nhân</a>
+    </div>
+  </div>
 
-    <section id="services">
-        <h2>Dịch Vụ Của Tôi</h2>
-        <div class="service-grid">
-            <article class="service-item card-style">
-                <h3>Web Design</h3>
-                <p>Thiết kế các trang web hiện đại, thân thiện và responsive.</p>
-                <a href="#">Tìm hiểu thêm</a>
-            </article>
-            <article class="service-item card-style">
-                <h3>UI/UX Design</h3>
-                <p>Tạo giao diện người dùng trực quan và tập trung vào trải nghiệm người dùng.</p>
-                <a href="#">Tìm hiểu thêm</a>
-            </article>
-            <article class="service-item card-style">
-                <h3>App Design</h3>
-                <p>Thiết kế ứng dụng di động với giao diện sạch sẽ và trải nghiệm mượt mà.</p>
-                <a href="#">Tìm hiểu thêm</a>
-            </article>
-        </div>
-    </section>
+  <div class="buttons">
+    <button id="prev">◀</button>
+    <button id="next">▶</button>
+  </div>
 
-    <section id="portfolio" class="secondary-bg">
-        <h2>Các Dự Án Của Tôi</h2>
-        <div class="project-grid">
-            <figure class="project-item card-style">
-                <img src="images/image copy 2.png" alt="Dự án thiết kế web sức khỏe và thể hình">
-                <figcaption>
-                    <h3>Ứng dụng sức khỏe và thể hình</h3>
-                    <p>Phát triển một trang web chăm sóc bản thân một cách có khoa học như thức ăn và chế độ tập luyện</p>
-                </figcaption>
-            </figure>
-            <figure class="project-item card-style">
-                <img src="images/image copy 3.png" alt="Dự án Quản lý cửa hàng tay cầm chơi game">
-                <figcaption>
-                    <h3>Quản lý công ty tay cầm</h3>
-                    <p>Ứng dụng web để quản lý nhân viên và các chiến thuật marketing.</p>
-                </figcaption>
-            </figure>
-            <figure class="project-item card-style">
-                <img src="images/bs.jpg" alt="Dự án Web Portfolio">
-                <figcaption>
-                    <h3>Web Portfolio</h3>
-                    <p>Trang web portfolio cá nhân để giới thiệu kỹ năng và dự án.</p>
-                </figcaption>
-            </figure>
-        </div>
-    </section>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
 
-    <section id="contact">
-        <h2>Liên Hệ Tôi</h2>
-        <p class="contact-info">Email: <a href="mailto:24050056@student.bdu.edu.vn"><strong>24050056@student.bdu.edu.vn</strong></a></p>
-        <p class="contact-info">Điện thoại: <strong>0845304369</strong></p>
-        
-        <a href="images/Lê Quang .pdf" download class="button accent-button">Tải xuống CV</a>
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
 
-        <form action="#" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Tên của bạn" required>
-            <input type="email" name="email" placeholder="Email của bạn" required>
-            <textarea name="message" rows="5" placeholder="Nội dung tin nhắn" required></textarea>
-            <button type="submit" class="button primary-button">Gửi Tin Nhắn</button>
-        </form>
-    </section>
+      // đổi background
+      const bg = slides[index].dataset.bg;
+      document.body.style.backgroundImage = bg;
+    }
 
-    <footer>
-        <p>© CopyRight by Lê Quang Lộc</p>
-    </footer>
+    document.getElementById('prev').addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
 
-    <script src="script.js" defer></script>
+    document.getElementById('next').addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+
+    // Hiển thị slide đầu tiên
+    showSlide(current);
+  </script>
 </body>
 </html>
